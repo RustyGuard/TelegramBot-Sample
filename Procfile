@@ -1,0 +1,1 @@
+web: python bot-yandex-static-api.py
