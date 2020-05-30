@@ -16,7 +16,7 @@ def main():
         image.marks.append(Marker(p))
         update.message.reply_photo(photo=image.to_http(0.05, 'map', p),
                                    caption='Пред вами ' + place)
-
+    print('Starting...')
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("show", command_show,
@@ -24,8 +24,10 @@ def main():
                                   pass_job_queue=True,
                                   pass_chat_data=True,
                                   pass_user_data=True))
+
+    print('start_polling!')
     updater.start_polling()
-    print('Started!')
+    print('idle!')
     updater.idle()
 
 
