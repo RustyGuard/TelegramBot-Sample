@@ -1,1 +1,1 @@
-web: python bot-yandex-static-api.py
+worker: python bot-yandex-static-api.py
